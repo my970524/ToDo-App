@@ -193,6 +193,9 @@ body {
   font-size: 25px;
   margin: 10px 30px;
 }
+.right .todo .todo-list li button:hover {
+  cursor: pointer;
+}
 .right .todo .todo-list li:nth-child(1) {
   padding-top: 30px;
 }
