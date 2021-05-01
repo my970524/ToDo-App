@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="./style.css?ver1" />
+  </head>
+  <body>
+    <!-- Left -->
+    <div class="left">
+      <div class="calendarAndClock">
+        <div class="calendar">
+          <div class="header">
+            <div class="year-month"></div>
+            <div class="nav">
+              <button class="nav-btn go-prev" title="prev month">&lt;</button>
+              <button class="nav-btn go-today">Today</button>
+              <button class="nav-btn go-next" title="next month">&gt;</button>
+            </div>
+          </div>
+          <div class="main">
+            <div class="days">
+              <div class="day">SUN</div>
+              <div class="day">MON</div>
+              <div class="day">TUE</div>
+              <div class="day">WED</div>
+              <div class="day">THU</div>
+              <div class="day">FRI</div>
+              <div class="day">SAT</div>
+            </div>
+            <div class="dates"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clock">
+        <p class="clock-title">00:00:00</p>
+      </div>
+      <div class="weather-container">
+        <p class="weather"></p>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="right">
+      <div class="logout">
+        <button>Logout</button>
+      </div>
+      <div class="user">
+        <form class="user-form">
+          <input
+            type="text"
+            class="user-input"
+            placeholder="What is your name?"
+          />
+        </form>
+        <h4 class="user-greeting"></h4>
+      </div>
+      <div class="todo">
+        <form class="todo-form">
+          <input
+            type="text"
+            class="todo-input"
+            placeholder="Make a ToDo List!"
+          />
+        </form>
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="./JS/greeting.js"></script>
+    <script src="./JS/logout.js"></script>
+    <script src="./JS/calendar.js"></script>
+    <script src="./JS/clock.js"></script>
+    <script src="./JS/weather.js"></script>
+    <script src="./JS/todo.js"></script>
+  </body>
+</html>

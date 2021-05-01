@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  display: flex;
+  background-color: blanchedalmond;
+}
+/* Left */
+/* Calendar */
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+.left .calendarAndClock .calendar button {
+  all: unset;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.left .calendarAndClock .calendar button:hover {
+  color: #e15f41;
+}
+.left .calendarAndClock .calendar {
+  width: 700px;
+  height: 550px;
+  background-color: #f19066;
+  border-radius: 15px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 40px 0;
+}
+.left .calendarAndClock .calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.left .calendarAndClock .calendar .header .year-month {
+  font-size: 60px;
+}
+.left .calendarAndClock .calendar .main {
+  padding: 0 15px;
+}
+.left .calendarAndClock .calendar .main .days {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 30px;
+}
+.left .calendarAndClock .calendar .main .days .day {
+  width: calc(100% / 7);
+  text-align: center;
+}
+.left .calendarAndClock .calendar .main .dates {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px;
+  font-size: 30px;
+}
+.left .calendarAndClock .calendar .main .dates .date {
+  width: calc(100% / 7);
+  text-align: center;
+  padding: 5px 0;
+  z-index: 2;
+}
+.left .calendarAndClock .calendar .main .dates .date .other {
+  opacity: 0.5;
+}
+.left .calendarAndClock .calendar .main .dates .date .today {
+  position: relative;
+}
+.left .calendarAndClock .calendar .main .dates .date .today::before {
+  position: absolute;
+  top: -2.5px;
+  right: -15px;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e15f41;
+  z-index: -1;
+}
+.left .calendarAndClock .calendar .main .dates .date:nth-child(7n + 1) {
+  color: #d13e3e;
+}
+.left .calendarAndClock .calendar .main .dates .date:nth-child(7n) {
+  color: #396ee2;
+}
+
+/* Clock */
+.left .clock .clock-title {
+  color: #786fa6;
+  font-size: 80px;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+/* Weather */
+.left .weather {
+  font-size: 45px;
+  color: #778beb;
+}
+
+/* Right */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Logout */
+.right .logout button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background-color: #f19066;
+  width: 85px;
+  height: 35px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right .logout button:active {
+  transform: scale(0.8);
+}
+/* Greeting */
+.user-form,
+.user-greeting {
+  display: none;
+}
+.show {
+  display: block;
+}
+.right .user-form input {
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  background-color: #f19066;
+  color: #fff;
+  margin: 30px 0;
+}
+.right .user-form input::placeholder {
+  color: #fff;
+}
+.right .user-form input:focus {
+  outline: none;
+}
+.right .user-greeting {
+  font-size: 50px;
+  color: #f19066;
+  margin: 30px 0;
+}
+
+/* ToDo */
+.right .todo .todo-form {
+  width: 500px;
+  height: 50px;
+}
+.right .todo .todo-form .todo-input {
+  box-sizing: border-box;
+  width: 700px;
+  height: 80px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+}
+.right .todo .todo-form .todo-input:focus {
+  outline: none;
+}
+.right .todo .todo-list {
+  margin-top: 40px;
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+  width: 700px;
+  height: 650px;
+  border-radius: 15px;
+  color: #fff;
+}
+.right .todo .todo-list li {
+  font-size: 25px;
+  margin: 10px 30px;
+}
+.right .todo .todo-list li:nth-child(1) {
+  padding-top: 30px;
+}
+.right .todo .todo-list li button {
+  border: none;
+  background-color: transparent;
+}
